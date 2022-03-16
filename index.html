@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang=“en”>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quotely | Stay Positive</title>
+    <link rel="icon" type="image/x-icon" href="/img/logo.png">
+    <script type="module" src="https://unpkg.com/@ionic/core@latest/dist/ionic/ionic.esm.js"></script>
+    <script nomodule="" src="css/ionic.js"></script>
+    <script src="https://kit.fontawesome.com/82f9c5da55.js" crossorigin="anonymous"></script>
+
+    <link href="css/ionic.bundle.css" rel="stylesheet">
+
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="css/jquery.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body >
+    <ion-app>
+        <ion-header>
+            <ion-toolbar color="primary">
+                
+                <ion-title text-left color="secondary">
+                   <div id="apptitle"><i class="fas fa-quote-left"></i> Quotely </div> 
+                </ion-title>
+                <!-- &nbsp; <i class="far fa-comment-alt" color="secondary"></i> <ion-text  color="secondary"> Quotely</ion-text>  -->
+               
+            </ion-toolbar>
+        </ion-header>
+        <div id="main_screen">
+
+        
+        <ion-tabs >
+
+            <ion-tab tab="quotes" >
+             
+              
+      
+              <ion-content fullscreen class="ion-padding">
+                <ion-content>
+                    <ion-grid>
+                        <ion-row>
+                            <ion-col size="12" size-md>
+                                <ion-card style="top: 20vh;">
+                                    
+                                    <ion-card-content >
+                                        <ion-item lines="none">
+        
+        
+                                            <ion-label class="qte" text-wrap id="lblQuote" color="tertiary">
+                                                <!-- <ion-icon name="ios-quote"></ion-icon> -->
+                                               
+                                            </ion-label>
+        
+                                            <!-- <ion-icon name="copy"></ion-icon> -->
+                                        </ion-item>
+                                        <ion-item lines="none" id="item-border">
+                                            <ion-label class="auth" id="lblAuth" color="tertiary"> </ion-label>
+                                        </ion-item>
+        
+                                        <!-- <ion-icon name="share"></ion-icon> -->
+                                        <ion-item lines="none">
+                                            <ion-button onclick="copyToClipboard('#lblQuote')" color="secondary" id="copy" fill="outline" slot="end" class="childqtebtn">
+                                                <i class="fa fa-copy"></i> &nbsp; Copy
+                                            </ion-button>
+                                           
+                                            <ion-button id="save" color="secondary" fill="outline" slot="end" class="childqtebtn">
+                                                <i class="fa fa-bookmark-o"></i> &nbsp; save
+                                            </ion-button> 
+                                          
+        
+                                        </ion-item>
+                                    </ion-card-content>
+        
+                                </ion-card>
+                            </ion-col>
+                        </ion-row>
+        
+                    </ion-grid>
+                    <ion-alert-controller>
+                    <ion-toast-controller>
+                </ion-content>
+              </ion-content>
+              <ion-footer>
+                <ion-row>
+                    
+    
+                    <ion-col size-md=" 6" offset-md="3">
+                    <ion-button expand="block" id="btnget" color="primary"><ion-text color="secondary">Next</ion-text></ion-button>
+                    </ion-col>
+                </ion-row>
+            </ion-footer>
+            </ion-tab>
+      <!-- Saved Quotes Tab Content -->
+            <ion-tab tab="savedQuotes">
+              
+      
+              <ion-content fullscreen class="ion-padding">
+               
+                    
+                    <ion-grid>
+                       
+                        <div id="savedQuotesList">
+                      
+        
+                    </ion-grid>
+                    
+                </div>
+              </ion-content>
+            </ion-tab>
+      
+            
+            <ion-tab-bar slot="bottom" main color="primary">
+              <ion-tab-button tab="quotes" onclick="changeTitle(true)">
+                <ion-label color="secondary"> Quotes</ion-label>
+                <ion-icon name="bulb" color="secondary"></ion-icon>
+              </ion-tab-button>
+              <ion-tab-button tab="savedQuotes" onclick="changeTitle(false)">
+                <ion-label color="secondary">Saved Quotes</ion-label>
+                <ion-icon name="bookmarks" color="secondary"></ion-icon>
+             
+            </ion-tab-bar>
+
+          </ion-tabs>
+        </div>
+    </ion-app>
+    <script src='fetchdata.js'></script>
+   
+  
+</body>
+
+</html>

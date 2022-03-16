@@ -1,0 +1,13 @@
+
+.qte{ font-family:'Montserrat', sans-serif !important; font-size: 18px !important;}
+.qtebtn{ font-family:'Montserrat', sans-serif !important; font-size: 15px !important;}
+.childqte{ font-family:'Montserrat', sans-serif !important; font-size: 15px !important;}
+.childqtebtn{ font-family:'Montserrat', sans-serif !important; font-size: 9px !important;}
+.auth{ font-family:'Lato', sans-serif !important;}
+#item-border{
+    border-bottom: 1px solid rgb(43, 44, 36);
+}
+
+/* ion-tab-bar {
+    color:#1e1e1e !important;
+} */
